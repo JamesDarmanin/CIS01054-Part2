@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <section>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <header>
+            <a href="#" ><img src="images/bamboo.png" class="logo"></a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#">Take Away Order</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">View Favourite Dishes</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="Contact.php">Contact Us</a></li>
+            </ul>
+        </header>
+        {% block content %}{% endblock %}
+        <footer>
+            <p>&copy; 2023 Bamboo Garden. All rights reserved.</p>
+        </footer>
+    </section>
+</body>
+</html>
