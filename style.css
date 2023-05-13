@@ -1,130 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body{
-    margin: 0px;
-    padding: 0px
+    background-image: url(../images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header {
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    color: whitesmoke;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #fff;
+    z-index: 999;
 }
 
 .logo{
-    position: absolute;
-    top: -10px;
-    left: 0;
-    padding: 20px;
+    cursor: pointer;
+    margin-right: auto;
 }
 
-.logo h2{
-    margin: 0;
-    font-size: 1.5em;
-    color: black;
-}
-    
-h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.text-container {
-    text-align: center;
-    margin-top: 0px;
-}
-
-nav {
-    background-color: white;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li{
-    float: left;
-}
-
-nav li a{
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav li a:hover{
-    background-color:white;
-}
-
-p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-image-container{
+.nav_links {
+    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 30px;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);;
+}
+
+header.logo{
     position: relative;
+    top: 0;
+    left: 0;
+    max-width: 5px;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+header ul li a:hover{
+    transform: translateY(-15px);
+}
+
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 80px;
+}
+
+.content.textBox{
+    position: relative;
+    max-width: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content .textBox h2{
+    color: white;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p{
+    color: whitesmoke
+}
+
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: black;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.content .textBox a:hover{
+    transform: translateY(-15px);
+}
+
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
     margin-top: 50px;
 }
 
-.image-wrapper{
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
+.content .imgBox img{
+    max-width: 500px;
 }
 
-.image-wrapper img{
+.Choice{
+    position: absolute;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.Choice li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Choice li a{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+
+.Choice li:hover{
+    transform: translateY(-15px);
+}
+
+.Choice li a:hover {
+    background-color: #fff;
+    color: black;
+    border: 2px solid black;
+}
+
+.Choice li img{
+    max-width: 60px;
+}
+.circle1{
+    position: fixed;
+    top:0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-    margin: auto;
+    background: gold;
+    clip-path: circle(600px at right 800px);
+    z-index: -100;
 }
 
-.text-wrapper{
-    flex: 1;
+.circle2{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at top left);
+    z-index: -100;
 }
 
-.text-wrapper h3{
-    margin-top: 0;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
 
-.text-wrapper p{
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.arrow{
+footer {
+    padding: 20px;
+    text-align: center;
     position: absolute;
-    right: -30px;
-    font-size: 2em;
-    color: black;
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out;
-}
+    bottom: -200px;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+ }
 
-.arrow:hover {
-    transform: translateX(10px)
-}
-
-body{
-    background-image: url(Background.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
+ .aboutUs {
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 100px;
+  }
+  
+  .aboutUs h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #0077b6;
+  }
+  
+  .aboutUs p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
