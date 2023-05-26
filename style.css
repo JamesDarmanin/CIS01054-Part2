@@ -38,16 +38,19 @@ header{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 30px 10%;
     background-color: #fff;
+    transform: translateX(-50%);
+    left: 50%;
     z-index: 999;
 }
 
 .logo{
     cursor: pointer;
     margin-right: auto;
+    max-width: 100px;
 }
 
 .nav_links {
@@ -87,13 +90,14 @@ header.logo{
     position: relative;
     top: 0;
     left: 0;
-    max-width: 5px;
+    max-width: 0px;
 }
 
 header ul
 {
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 header ul li{
@@ -134,12 +138,12 @@ header ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 150px;
 }
 
 .content .textBox h2{
     color: white;
-    font-size: 4em;
+    font-size: 6em;
     line-height: 1.4em;
     font-weight: 500;
 }
@@ -260,7 +264,7 @@ footer {
     left: 0;
  }
 
- .aboutUs {
+.aboutUs {
     margin: 50px auto;
     max-width: 800px;
     text-align: center;
@@ -269,17 +273,70 @@ footer {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 100px;
-  }
+}
   
-  .aboutUs h1 {
+.aboutUs h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     color: #0077b6;
-  }
+}
   
-  .aboutUs p {
+.aboutUs p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 10px;
-  }
+  } 
+
   
+.reservation {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.reservation h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0088a9;
+}
+
+.reservation form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.reservation label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.reservation input[type="text"],
+.reservation input[type="email"],
+.reservation input[type="date"],
+.reservation input[type="time"],
+.reservation input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.reservation button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #0088a9;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation button[type="submit"]:hover {
+    background-color: #005c70;
+}
