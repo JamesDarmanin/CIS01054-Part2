@@ -1,28 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styleContact.css">
-        <title>Contact</title>
-    </head>
-    <body>
-        <h1>Contact Us</h1>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="CSS/Contact.css">
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>If you have some sort of query or complaint you can contact us so we can make your experience more enjoyable</p>
+  </div>
+  <div class="contact-box">
+    <div class="contact-left">
+      <h3>Send your request</h3>
+      <form action="connect.php" method="post">
+        <div class="input-row">
+          <div class="input-group">
+            <label>NAME</label>
+            <input type="text" placeholder="Paul Attard" name="name">
+          </div>
+          <div class="input-group">
+            <label>PHONE NUMBER</label>
+            <input type="number" placeholder="1234 5678" name="phone">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>E-MAIL</label>
+            <input type="email" placeholder="paulattard@gmail.com" name="email">
+          </div>
+          <div class="input-group">
+            <label>SUBJECT</label>
+            <input type="text" placeholder="Enter your subject" name="subject">
+          </div>
+        </div>
 
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+        <label>MESSAGE</label>
+        <textarea rows="5" placeholder="Your Message" name="message"></textarea>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-
-        <h2>Contact Information</h2>
-        <p>Telephone Number: 21783256</p>
-        <p>Email Address: BambooGardenMalta@gmail.com</p>
-        <p>Find us also on Instagram and Facebook</p>
-    </body>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="contact-right">
+      <h3>Reach Us</h3>
+      <table>
+        <tr>
+          <td>Email:</td>
+          <td>ContactUs@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Phone:</td>
+          <td>+356 7713 5906</td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>123 Main Street, Marsaskala, Malta</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
 </html>
+
