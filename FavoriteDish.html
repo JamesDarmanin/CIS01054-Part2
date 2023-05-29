@@ -1,0 +1,29 @@
+{% set page_title = "Favorites" %}
+{% extends 'Layout.html' %}
+
+{% block content %}
+<div class="main">
+    <div class="section-title">
+        <h2>Favorites</h2>
+    </div>
+
+    <div class="menus">
+        {% for dish in favoriteDishes %}
+            <div class="menu-column">
+                <h4>{{ dish.dishName }}</h4>
+                <div class="single-menu">
+                    <img src="{{ dish.image }}" alt="{{ dish.dishName }}">
+                    <div class="menu-content">
+                        <h5>{{ dish.dishName }}</h5>
+                        <p>Price: ${{ dish.price }}</p>
+                        <form action="removeFromFavorites.php" method="post">
+                            <input type="hidden" name="dishName" value="{{ dish.dishName }}">
+                            <button type="submit">Remove from Favorites</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
