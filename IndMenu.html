@@ -1,0 +1,64 @@
+{% set page_title = "Chinese Menu" %}
+{% extends 'Layout.html' %}
+
+{% block content %}
+<div class="main">
+    <div class="section-title">
+        <h4>Indian Menu</h4>
+        <p>Explore our delightful Indian menu</p>
+    </div>
+    <div class="menus">
+        <div class="menu-column">
+            <h4>Starter</h4>
+            {% for item in starterItems %}
+            <div class="single-menu">
+                <img src="{{ item.image }}" alt="">
+                <div class="menu-content">
+                    <h5>{{ item.dishname }} <span>${{ item.price }}</span></h5>
+                    <p>{{ item.description }}</p>
+                    <form action="process_form.php" method="post">
+                        <input type="hidden" name="food" value="{{ item.dishname }}">
+                        <input type="hidden" name="price" value="{{ item.price }}">
+                        <button type="submit">Add to Favorites</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="menu-column">
+            <h4>Main</h4>
+            {% for item in mainItems %}
+            <div class="single-menu">
+                <img src="{{ item.image }}" alt="">
+                <div class="menu-content">
+                    <h5>{{ item.dishname }} <span>${{ item.price }}</span></h5>
+                    <p>{{ item.description }}</p>
+                    <form action="process_form.php" method="post">
+                        <input type="hidden" name="food" value="{{ item.dishname }}">
+                        <input type="hidden" name="price" value="{{ item.price }}">
+                        <button type="submit">Add to Favorites</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="menu-column">
+            <h4>Drinks</h4>
+            {% for item in drinksItems %}
+            <div class="single-menu">
+                <img src="{{ item.image }}" alt="">
+                <div class="menu-content">
+                    <h5>{{ item.dishname }} <span>${{ item.price }}</span></h5>
+                    <p>{{ item.description }}</p>
+                    <form action="process_form.php" method="post">
+                        <input type="hidden" name="food" value="{{ item.dishname }}">
+                        <input type="hidden" name="price" value="{{ item.price }}">
+                        <button type="submit">Add to Favorites</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
