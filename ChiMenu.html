@@ -14,7 +14,7 @@
             <div class="single-menu">
                 <img src="{{ item.image }}" alt="">
                 <div class="menu-content">
-                    <h5>{{ item.dishname }} <span>${{ item.price }}</span></h5>
+                    <h5>{{ item.dishname }} <span>€{{ item.price }}</span></h5>
                     <p>{{ item.description }}</p>
                     <form action="process_form.php" method="post">
                         <input type="hidden" name="food" value="{{ item.dishname }}">
@@ -31,7 +31,7 @@
             <div class="single-menu">
                 <img src="{{ item.image }}" alt="">
                 <div class="menu-content">
-                    <h5>{{ item.dishname }} <span>${{ item.price }}</span></h5>
+                    <h5>{{ item.dishname }} <span>€{{ item.price }}</span></h5>
                     <p>{{ item.description }}</p>
                     <form action="process_form.php" method="post">
                         <input type="hidden" name="food" value="{{ item.dishname }}">
@@ -48,7 +48,7 @@
             <div class="single-menu">
                 <img src="{{ item.image }}" alt="">
                 <div class="menu-content">
-                    <h5>{{ item.dishname }} <span>${{ item.price }}</span></h5>
+                    <h5>{{ item.dishname }} <span>€{{ item.price }}</span></h5>
                     <p>{{ item.description }}</p>
                     <form action="process_form.php" method="post">
                         <input type="hidden" name="food" value="{{ item.dishname }}">
