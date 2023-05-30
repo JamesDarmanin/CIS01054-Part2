@@ -26,6 +26,6 @@ function removeFavoriteDish($dishName)
 }
 
 // Redirect back to the favorites page
-header("Location: FavoriteDish.html");
+header("Location: Templates/FavoriteDish.html");
 exit;
 ?>
