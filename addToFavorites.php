@@ -13,13 +13,6 @@ function addToFavorites($dishName, $price)
     $_SESSION['favorites'][] = array('dishName' => $dishName, 'price' => $price);
 }
 
-// Function to retrieve the favorited dishes from the session
-function getFavoriteDishes()
-{
-    // Return the favorites array if it exists, otherwise return an empty array
-    return isset($_SESSION['favorites']) ? $_SESSION['favorites'] : array();
-}
-
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the dish details from the form
@@ -32,6 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Redirect back to the previous page
 $referer = $_SERVER['HTTP_REFERER'];
-header("Location: $referer");
+header("Location: Templates/FavoriteDish.html");
 exit;
 ?>
